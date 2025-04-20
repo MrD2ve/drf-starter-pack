@@ -1,7 +1,6 @@
-from .models import Product, Review, Category, ProductViewHistory
-from django.contrib.auth.models import User
 from rest_framework import serializers
-
+from django.db import models
+from start.models import Product, Review, ProductViewHistory, Category
 
 class CategorySerializer(serializers.ModelSerializer):
     class Meta:
@@ -18,6 +17,7 @@ class ReviewSerializer(serializers.ModelSerializer):
 
 class ProductSerializer(serializers.ModelSerializer):
     avg_rating = serializers.FloatField(read_only=True, required=False)
+    price = serializers.CharField(read_only=True)
 
     class Meta:
         model = Product

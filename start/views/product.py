@@ -1,37 +1,28 @@
-import django_filters.rest_framework as django_filters
 from django.db import models
-from rest_framework import viewsets, status, filters
+from django_filters import rest_framework as django_filters
+from rest_framework import filters
+from rest_framework import viewsets
 from rest_framework.decorators import action
-from rest_framework.response import Response
-from start.models import Product, Category, Review
-from start.serializers import ProductSerializer, ReviewSerializer, CategorySerializer
 from rest_framework.pagination import PageNumberPagination
-from rest_framework.permissions import IsAuthenticated
+from rest_framework.response import Response
+from start.filters import ProductFilter
+from start.models import Product
+from start.permissions import IsStaffOrReadOnly
+from start.serializers import ProductSerializer
 
 
-class ReviewViewSet(viewsets.ModelViewSet):
-
-    queryset = Review.objects.all()
-    serializer_class = ReviewSerializer
-
-class ProductPagination(PageNumberPagination):
-    page_size = 2
-
-
-class CategoryViewSet(viewsets.ModelViewSet):
-
-    queryset = Category.objects.all()
-    serializer_class = CategorySerializer
-    pagination_class = ProductPagination
-
+class CustomPagination(PageNumberPagination):
+    page_size = 3
 
 
 class ProductViewSet(viewsets.ModelViewSet):
-    pagination_class = ProductPagination
+    pagination_class = CustomPagination
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
     filter_backends = (django_filters.DjangoFilterBackend, filters.SearchFilter)
-    permission_classes = [IsAuthenticated]
+    permission_classes = [IsStaffOrReadOnly]
+    filterset_class = ProductFilter
+    search_fields = ['name', 'description']
 
     def list(self, request, *args, **kwargs):
         category = request.query_params.get('category', None)
