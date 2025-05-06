@@ -47,7 +47,7 @@ docker-compose up --build
 ```
 
 📧 Contact
-For any questions or collaboration inquiries, feel free to reach out at my [email] (juramurodovulugbek@gmail.com).
+For any questions or collaboration inquiries, feel free to reach out at juramurodovulugbek@gmail.com
 
 📄 License
 This project is licensed under the MIT License.
