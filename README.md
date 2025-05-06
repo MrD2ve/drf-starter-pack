@@ -31,7 +31,7 @@ A robust and scalable backend system built with Django REST Framework, designed 
 
 1. Clone the Repository
 ```
-git clone [ https://github.com/MrD2ve/drf-starter-pack.git ]
+git clone https://github.com/MrD2ve/drf-starter-pack.git
 cd drf-starter-pack
 ```
 
@@ -47,7 +47,7 @@ docker-compose up --build
 ```
 
 📧 Contact
-For any questions or collaboration inquiries, feel free to reach out at [juramurodovulugbek@gmail.com].
+For any questions or collaboration inquiries, feel free to reach out at my [email] (juramurodovulugbek@gmail.com).
 
 📄 License
 This project is licensed under the MIT License.
