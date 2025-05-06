@@ -30,16 +30,21 @@ A robust and scalable backend system built with Django REST Framework, designed 
 ## 📦 Installation
 
 1. Clone the Repository
-
-> git clone [ https://github.com/MrD2ve/drf-starter-pack.git ]
-> cd drf-starter-pack
+```
+git clone [ https://github.com/MrD2ve/drf-starter-pack.git ]
+cd drf-starter-pack
+```
 
 
 2. Create .env file
+```
 Create a .env file at the root and fill it with required environment variables.
+```
 
-3. Build and Start with Docker
+4. Build and Start with Docker
+```
 docker-compose up --build
+```
 
 📧 Contact
 For any questions or collaboration inquiries, feel free to reach out at [juramurodovulugbek@gmail.com].
