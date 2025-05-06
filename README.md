@@ -1,4 +1,4 @@
-  Django Rest Framework starter pack
+# Django Rest Framework starter pack
 
 A robust and scalable backend system built with Django REST Framework, designed to handle user authentication, billing, messaging, and asynchronous tasks. This project is containerized with Docker and integrates services like Celery, Redis, RabbitMQ, JWT authentication, SMS gateway, and email verification.
 
@@ -31,8 +31,8 @@ A robust and scalable backend system built with Django REST Framework, designed 
 
 1. Clone the Repository
 
-git clone [ https://github.com/MrD2ve/drf-starter-pack.git ]
-cd drf-starter-pack
+> git clone [ https://github.com/MrD2ve/drf-starter-pack.git ]
+> cd drf-starter-pack
 
 
 2. Create .env file
